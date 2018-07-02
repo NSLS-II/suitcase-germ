@@ -1,0 +1,3 @@
+include versioneer.py
+include suitcase/germ/_version.py
+include suitcase/germ/_version.py
