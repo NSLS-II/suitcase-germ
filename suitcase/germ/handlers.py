@@ -3,7 +3,14 @@ import h5py
 from .conversions import payload2event, DATA_TYPEMAP
 
 
-class BinaryGeRMHandler(HandlerBase):
+class BinaryGeRMHandler():
+    '''
+        This is the handler for datasets using the runs 2018 onwards.
+
+        This will take the filename of the binary data.
+        Upon call, this will return a column by name.
+    '''
+
     specs = {'BinaryGeRM'}
 
     def __init__(self, fpath, chunksize=None):
@@ -62,7 +69,7 @@ class BinaryGeRMHandler(HandlerBase):
         self._file.close()
 
 
-class GeRMHandler(HandlerBase):
+class GeRMHandler():
     specs = {'GeRM'}
 
     def __init__(self, fpath):
